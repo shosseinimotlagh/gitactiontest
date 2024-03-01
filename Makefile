@@ -1,17 +1,14 @@
-# Makefile
 CC=g++
-CFLAGS=-I/usr/local/include -L/usr/local/lib -std=c++14
-GTEST_LIB=-lgtest -lgtest_main -pthread
+CFLAGS=-I.
 
 main: main.o
- $(CC) $(CFLAGS) -o main main.o $(GTEST_LIB)
+	$(CC) -o main main.o
 
 main.o: main.cpp
- $(CC) $(CFLAGS) -c -o main.o main.cpp
+	$(CC) -c -o main.o main.cpp
 
 check: main
- ./main
+	./main
 
 clean:
- rm -f main.o main
-
+	rm -f main.o main
