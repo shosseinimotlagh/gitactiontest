@@ -1,4 +1,3 @@
-# Makefile
 CC=g++
 CFLAGS=-I.
 
