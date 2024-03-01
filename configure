@@ -1,0 +1,25 @@
+#!/bin/sh
+# configure
+
+# Check if g++ is installed
+if ! command -v g++ >/dev/null 2>&1; then
+    echo "g++ is required but it's not installed. Please install it and run this script again."
+    exit 1
+fi
+
+# Create the Makefile
+cat << EOF > Makefile
+CC=g++
+CFLAGS=-I.
+
+main: main.o
+	\$(CC) -o main main.o
+
+main.o: main.cpp
+	\$(CC) -c -o main.o main.cpp
+
+clean:
+	rm -f main.o main
+EOF
+
+echo "Makefile created successfully."
