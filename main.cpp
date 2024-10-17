@@ -2,7 +2,7 @@
 
 
 int main(int argc, char **argv) {
-    std::cout<<"\n\n\n\n hello world!!\n\n\n"<<std::endl;
+    std::cout<<"\n\n\n\n hello world!! from azure VM\n\n\n"<<std::endl;
 
 
 
